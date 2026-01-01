@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*,::before,::after{ margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+button{ cursor: pointer;}
+:disabled{ cursor: not-allowed;}
+img{ vertical-align: bottom;}
+label{ display: inline-block;}
+ul{ list-style: none; padding: 0;}
+
+
+html{ 
+     font-size: 15px;
+     --o50:#FF9500;
+     --o70:#FFbf66;
+     --white:#FFF;
+     --w97:#F7F7F8;
+     --w95:#F1F1F3;
+     --w90:#E4E4E7;
+     --gray15:#262626;
+     --gap:60px;
+}
+
+body{font: 16px/normal "Be Vietnam Pro", sans-serif; background: var(--w97);}
+
+.container{ max-width: 1625px; margin: auto; padding: 0 1rem;}
+
+.flex{ display: flex; }
+.align-center{ align-items: center;}
+.justify-between{ justify-content: space-between;}
+.justify-center{ justify-content: center;}
+.justify-right{ justify-content: right;}
+.img-resp{ max-width: 100%; height: auto;}
+.text-center{text-align: center;}
+
+/* grid */
+.row{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;}
+.col-1{ grid-column: span 1;}
+.col-2{ grid-column: span 2;}
+.col-3{ grid-column: span 3;}
+.col-4{ grid-column: span 4;}
+.col-5{ grid-column: span 5;}
+.col-6{ grid-column: span 6;}
+.col-7{ grid-column: span 7;}
+.col-8{ grid-column: span 8;}
+.col-9{ grid-column: span 9;}
+.col-10{ grid-column: span 10;}
+.col-12{ grid-column: span 12;}
+
+/* custom */
+
+.top-banner{ width: calc(100% - var(--gap)); margin: auto; background: var(--o50); color: var(--white); font-size: 14px; line-height: 41px; border-radius: 6px;}
+
+nav{ padding: 20.5px 0;}
+nav ul.flex{ margin-left: 50px;}
+nav ul a{ display: inline-block; line-height: 45px; padding: 0 20px; font-size: 18px; color: var(--gray15);}
+nav ul a.active{background: var(--w95);}
+nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;}
+
+
+@media screen and (max-width:1645px){
+     html{ --gap:40px; }
+     .container{max-width: 1280px; }
+     nav ul a{ font-size: 14px;}
+}
+
+
+@media screen and (max-width:1300px){
+     
+}
+
+@media screen and (max-width:1260px){
+     
+}
+
+
+
+@media screen and (max-width:980px){
+
+}
+
+
+@media screen and (max-width:767px){
+     html{ --gap:32px; }
+}
+
+
+@media screen and (max-width:460px){
+
+}
