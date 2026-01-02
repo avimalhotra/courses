@@ -12,17 +12,21 @@ html{
      font-size: 15px;
      --o50:#FF9500;
      --o70:#FFbf66;
+     --o95:#FFF4E5;
      --white:#FFF;
+     --w99:#fcfcfd;
      --w97:#F7F7F8;
      --w95:#F1F1F3;
      --w90:#E4E4E7;
      --gray15:#262626;
+     --gray20:#333;
      --gap:60px;
 }
 
 body{font: 16px/normal "Be Vietnam Pro", sans-serif; background: var(--w97);}
 
 .container{ max-width: 1625px; margin: auto; padding: 0 1rem;}
+.container-sm{ max-width: 673px; margin: auto; padding: 0 1rem;}
 
 .flex{ display: flex; }
 .align-center{ align-items: center;}
@@ -31,6 +35,9 @@ body{font: 16px/normal "Be Vietnam Pro", sans-serif; background: var(--w97);}
 .justify-right{ justify-content: right;}
 .img-resp{ max-width: 100%; height: auto;}
 .text-center{text-align: center;}
+.text-right{text-align: right;}
+
+
 
 /* grid */
 .row{ display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;}
@@ -55,6 +62,34 @@ nav ul.flex{ margin-left: 50px;}
 nav ul a{ display: inline-block; line-height: 45px; padding: 0 20px; font-size: 18px; color: var(--gray15);}
 nav ul a.active{background: var(--w95);}
 nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;}
+.menu{ display: none; margin-left: 10px; }
+
+.banner{ padding: 92px 0; text-align: center;}
+.banner-heading{ background: #fff; padding: 15px 12px;  position: relative;}
+.banner-heading::before{ content: url(../img/Abstract-Line.svg); position: absolute; width: 39px; height: 43px; left: 0; top: 0; transform: translate(-50%,-50%); }
+.square{ width: 48px; line-height: 48px; background: var(--o95); text-align: center; display: inline-block;}
+.banner-heading p{ font-size: 36px; line-height: 54px;}
+.banner-heading p span{ color: #FF9500;}
+
+.banner a{ display: inline-block; line-height: 49px; background: #fff; padding: 0 20px; margin-top: 50px; color: var(--gray15);}
+.banner a:first-child{ background: #FF9500; color: var(--white); border-radius: 6px;}
+
+.clients{ background: #fff; padding: 24px; flex-flow: wrap; }
+.clients .column{ flex: 1 0 auto; text-align: center; line-height: 68px; }
+
+
+.video{ margin: 80px 0;}
+.card{ background: var(--white); padding: 40px; border-radius: 10px; }
+.card .num{  font-size:60px; font-weight: bold; color: var(--gray15);}
+.card h3{ font-size:20px; font-weight: bold; color: var(--gray20); margin: 40px 0 10px;}
+.card a{ display: block; width: 48px; line-height: 48px; background: var(--w99); border: 1px solid var(--w95); color: var(--o50); text-align: center; }
+.card a span{ transform: rotate(45deg);}
+.bg-white{ background: var(--white); padding: 40px;}
+
+
+footer{ padding: 100px 0; background: var(--white); margin-top: 142px;}
+footer .container > p{ margin-top: 50px;}
+
 
 
 @media screen and (max-width:1645px){
@@ -75,15 +110,30 @@ nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;
 
 
 @media screen and (max-width:980px){
+.col-t-4{ grid-column: span 4;}
+.col-t-6{  grid-column: span 6;}
+.col-t-12{  grid-column: span 12;}
+nav ul.flex{ margin-left: 20px;}
+nav ul a{ padding: 0 10px;}
 
 }
 
 
 @media screen and (max-width:767px){
+.col-m-4{ grid-column: span 4;}
+.col-m-6{  grid-column: span 6;}
+.col-m-12{  grid-column: span 12;}
      html{ --gap:32px; }
+     nav ul a{ padding: 0 5px;}
 }
 
 
 @media screen and (max-width:460px){
-
+.col-p-4{ grid-column: span 4;}
+.col-p-6{  grid-column: span 6;}
+.col-p-8{  grid-column: span 8;}
+.col-p-12{  grid-column: span 12;}
+.collapse{ display: none;}
+.menu{ display: inline-block; }
+.clients .column{ flex: 1 0 25%; }
 }
