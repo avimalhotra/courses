@@ -6,6 +6,7 @@ button{ cursor: pointer;}
 img{ vertical-align: bottom;}
 label{ display: inline-block;}
 ul{ list-style: none; padding: 0;}
+::backdrop{ background: #000a; }
 
 
 html{ 
@@ -60,12 +61,13 @@ body{font: 16px/normal "Be Vietnam Pro", sans-serif; background: var(--w97);}
 nav{ padding: 20.5px 0;}
 nav ul.flex{ margin-left: 50px;}
 nav ul a{ display: inline-block; line-height: 45px; padding: 0 20px; font-size: 18px; color: var(--gray15);}
-nav ul a.active{background: var(--w95);}
-nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;}
+nav ul button{line-height: 45px; padding: 0 20px; font-size: 18px; color: var(--gray15); border: none; background: none;}
+nav ul .active{background: var(--w95);}
+nav ul .login{ background: var(--o50); color: var(--white); border-radius: 6px;}
 .menu{ display: none; margin-left: 10px; }
 
 .banner{ padding: 92px 0; text-align: center;}
-.banner-heading{ background: #fff; padding: 15px 12px;  position: relative;}
+.banner-heading{ background: #fff; padding: 15px 12px; position: relative;}
 .banner-heading::before{ content: url(../img/Abstract-Line.svg); position: absolute; width: 39px; height: 43px; left: 0; top: 0; transform: translate(-50%,-50%); }
 .square{ width: 48px; line-height: 48px; background: var(--o95); text-align: center; display: inline-block;}
 .banner-heading p{ font-size: 36px; line-height: 54px;}
@@ -79,6 +81,9 @@ nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;
 
 
 .video{ margin: 80px 0;}
+.benefits .row:first-child{ margin-bottom: 80px;}
+.hidden-course{display: none;}
+.viewall{ width: 120px; height: 63px; border-radius: 5px; background: #fff; color: #000; border: none;}
 .card{ background: var(--white); padding: 40px; border-radius: 10px; }
 .card .num{  font-size:60px; font-weight: bold; color: var(--gray15);}
 .card h3{ font-size:20px; font-weight: bold; color: var(--gray20); margin: 40px 0 10px;}
@@ -89,6 +94,10 @@ nav ul a.login{ background: var(--o50); color: var(--white); border-radius: 6px;
 
 footer{ padding: 100px 0; background: var(--white); margin-top: 142px;}
 footer .container > p{ margin-top: 50px;}
+#signup,#login{ position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); border: none; box-shadow: 0 0 10px #aaa inset; padding: 1rem; border-radius: 10px; }
+:is(#signup,#login) label{ display: block; margin: 15px 0;}
+:is(#signup,#login) input{ float: right; padding: 5px 10px; border: 1px solid #aaa;}
+:is(#signup,#login) button{line-height: 45px; padding: 0 20px; font-size: 18px; color: var(--gray15); border: none; background: #FF9500; color: #fff; float: right; }
 
 
 
@@ -115,7 +124,6 @@ footer .container > p{ margin-top: 50px;}
 .col-t-12{  grid-column: span 12;}
 nav ul.flex{ margin-left: 20px;}
 nav ul a{ padding: 0 10px;}
-
 }
 
 
@@ -133,7 +141,8 @@ nav ul a{ padding: 0 10px;}
 .col-p-6{  grid-column: span 6;}
 .col-p-8{  grid-column: span 8;}
 .col-p-12{  grid-column: span 12;}
-.collapse{ display: none;}
 .menu{ display: inline-block; }
-.clients .column{ flex: 1 0 25%; }
+.clients .column{ flex: 1 0 25%;}
+.collapse{ display: none; position: absolute; left: 0; right: 0; top: 118px; z-index: 1; text-align: right;}
+.collapse ul.flex{ flex-flow: column wrap; }
 }
